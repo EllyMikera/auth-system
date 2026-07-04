@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.maincont{
+    display: flex;
+}
+
+aside{
+    height: 100vh;
+    background-color: rgb(28, 28, 248);
+    width: 180px;
+    color: white;
+    padding: 30px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin-top: 30px;
+}
+
+ul li{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+li:hover{
+    background-color: rgb(127, 127, 240);
+}
+
+main{
+    width: 100%;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+
+.userCont{
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(203, 202, 202);
+    border-radius: 10px;
+}
+.overview{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 40px 0px 0px 32px;
+}
+
+.totalBalance, .another, .another2{
+    padding: 30px;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(203, 202, 202);
+    border-radius: 10px;
+}
