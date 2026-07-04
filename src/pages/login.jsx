@@ -49,7 +49,7 @@ async function handleLogin() {
             return;
         } else {
             alert('Login failed, check your username or password')
-            navigate('/', replace=true)
+            navigate('/', {replace: true})
             return
         }
     } catch(error) {
