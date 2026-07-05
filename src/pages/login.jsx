@@ -65,9 +65,9 @@ async function handleLogin() {
                 <form onSubmit={handleLogin}>
                     <h2 className="header">Login</h2>
                     <label htmlFor="username">username</label><br />
-                    <input type="text" className="username" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)}/><br />
+                    <input type="text" className="username" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)} required/><br />
                     <label htmlFor="password">password</label><br />
-                    <input type="password" className="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)}/><br />
+                    <input type="password" className="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} required/><br />
                     <button type="submit" disabled={loading}>{loading ? <Spinner /> : "Login"}</button>
                     <Link to='/signup'>You dont have an account? Sign up</Link>
                 </form>

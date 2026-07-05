@@ -71,13 +71,13 @@ async function handleSignup() {
                 <form onSubmit={handleSignup}>
                     <h2 className="header">Register</h2>
                     <label htmlFor="username">username</label><br />
-                    <input type="text" className="username" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)}/><br />
+                    <input type="text" className="username" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)} required/><br />
                     <label htmlFor="email">Email</label><br />
-                    <input type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)}/>
+                    <input type="email" className="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} required/>
                     <label htmlFor="password">password</label><br />
-                    <input type="password" className="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)}/><br />
+                    <input type="password" className="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} required/><br />
                     <label htmlFor="confirm password">Confirm Password</label><br />
-                    <input type="password" placeholder="Confirm password" onChange={(e) => setConfirmation(e.target.value)}/><br />
+                    <input type="password" className="confirmation" placeholder="Confirm password" onChange={(e) => setConfirmation(e.target.value)} required/><br />
                     <button type="submit" disabled={loading}>{loading ? <Spinner /> : "Register"}</button>
                     <Link to='/'>Already have an account? Login</Link>
                 </form>
