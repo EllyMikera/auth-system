@@ -38,7 +38,7 @@ async function handleSignup() {
         const data = await response.json()
 
         //calculate how long the request took
-        const timeElapsed = startTime - Date.now()
+        const timeElapsed = Date.now() - startTime
 
         //wait until 2 seconds has passed
         if(timeElapsed < 2000) {
