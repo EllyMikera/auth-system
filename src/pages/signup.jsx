@@ -18,10 +18,6 @@ async function handleSignup() {
     const startTime = Date.now()
     try{
         event.preventDefault();
-        if(password != confirmation) {
-            alert('Passwords do not match')
-            return
-        }
         const response = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
             method: "POST",
             headers: {
@@ -48,6 +44,11 @@ async function handleSignup() {
         }
 
         setLoading(false)
+
+        if(password != confirmation) {
+            alert('Passwords do not match')
+            return
+        }
 
         if(response.ok) {
             // alert(data.message)
