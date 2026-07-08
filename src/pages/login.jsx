@@ -5,7 +5,7 @@ import Spinner from "../components/spinner";
 
 function Login() {
 
-    const[username, setUsername] = useState("")
+    const[email, setEmail] = useState("")
     const[password, setPassword] = useState("")
     const[loading, setLoading] = useState(false)
     const navigate = useNavigate()
@@ -22,7 +22,7 @@ async function handleLogin() {
                 "content-type": "application/json"
             },
             body: JSON.stringify({
-                username,
+                email,
                 password
             })
         })
@@ -48,7 +48,7 @@ async function handleLogin() {
             navigate('/profile')
             return;
         } else {
-            alert('Login failed, check your username or password')
+            alert('Login failed, check your email or password')
             navigate('/', {replace: true})
             return
         }
@@ -64,9 +64,9 @@ async function handleLogin() {
             <div className="container">
                 <form onSubmit={handleLogin}>
                     <h2 className="header">Login</h2>
-                    <label htmlFor="username">username</label><br />
-                    <input type="text" className="username" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)} required/><br />
-                    <label htmlFor="password">password</label><br />
+                    <label htmlFor="email">Email</label><br />
+                    <input type="email" className="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} required/><br />
+                    <label htmlFor="password">Password</label><br />
                     <input type="password" className="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} required/><br />
                     <button type="submit" disabled={loading}>{loading ? <Spinner /> : "Login"}</button>
                     <Link to='/signup'>You dont have an account? Sign up</Link>
