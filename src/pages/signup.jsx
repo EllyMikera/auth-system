@@ -59,7 +59,7 @@ async function handleSignup() {
             return
         }
     } catch(error) {
-        console.error(error.message)
+        console.log(error.message)
         alert('Network error, please try again')
     }
 }
@@ -94,3 +94,4 @@ async function handleSignup() {
 }
 
 export default Signup;
+
