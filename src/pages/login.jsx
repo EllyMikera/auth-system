@@ -48,7 +48,7 @@ async function handleLogin() {
             navigate('/profile')
             return;
         } else {
-            alert('Login failed, check your email or password')
+            alert('Login failed: ' + data.message)
             navigate('/', {replace: true})
             return
         }
