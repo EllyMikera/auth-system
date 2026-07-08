@@ -16,6 +16,7 @@ async function handleLogin() {
     const startTime = Date.now()
     try{
         event.preventDefault();
+        console.log("Api url: " + import.meta.env.VITE_API_URL);
         const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
             method: "POST",
             headers: {
